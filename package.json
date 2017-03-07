@@ -21,10 +21,12 @@
     "url": "https://github.com/inkblotty/blotTask/issues"
   },
   "homepage": "https://github.com/inkblotty/blotTask#readme",
-  "devDependencies": {
+  "dependencies": {
     "express": "^4.15.2",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+  },
+  "devDependencies": {
     "react-router": "^3.0.2"
   }
 }
