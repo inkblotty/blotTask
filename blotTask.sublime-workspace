@@ -1,0 +1,570 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"checkRepo",
+				"checkedReport"
+			],
+			[
+				"getInci",
+				"getIncidentRepository"
+			],
+			[
+				"sixS",
+				"sixSevenFourDate"
+			],
+			[
+				"all",
+				"allContacts"
+			],
+			[
+				"upda",
+				"updatedAgency"
+			],
+			[
+				"dep",
+				"departments"
+			],
+			[
+				"indivi",
+				"individualOptions"
+			],
+			[
+				"activeF",
+				"activeButHiddenFilters"
+			],
+			[
+				"condu",
+				"conductedInvestigation"
+			],
+			[
+				"conducte",
+				"conductedInvestigationComments"
+			],
+			[
+				"bcg-color-gray-",
+				"bcg-color-gray-accordion-dark"
+			],
+			[
+				"color-pria",
+				"color-primary-alt-lightest"
+			],
+			[
+				"c-sso-",
+				"c-sso-table__image"
+			],
+			[
+				"Agency",
+				"AgencyManagementLanding"
+			],
+			[
+				"color",
+				"color"
+			],
+			[
+				"curre",
+				"currentThreeYearReview"
+			],
+			[
+				"input",
+				"inputChange"
+			],
+			[
+				"Conta",
+				"ContactsPage"
+			],
+			[
+				"showEn",
+				"showEngineeringInputs"
+			],
+			[
+				"bord",
+				"border-radius"
+			],
+			[
+				"text",
+				"textarea\tTag"
+			],
+			[
+				"o-detail--ehc",
+				"o-detail--ehc-column__count"
+			],
+			[
+				"dt",
+				"dt\tTag"
+			],
+			[
+				"show",
+				"show_details"
+			],
+			[
+				"cus",
+				"custom-map"
+			],
+			[
+				"js",
+				"json_encode"
+			],
+			[
+				"chk-",
+				"chk-checked"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 256.0,
+		"last_filter": "Package Control: in",
+		"selected_items":
+		[
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: install",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 431.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"cd ..",
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/katief/Documents/blotTask"
+	],
+	"file_history":
+	[
+		"/Users/katief/Documents/Feb242017/app/src/index.js",
+		"/Users/katief/Documents/Feb242017/app/src/box.css",
+		"/Users/katief/Documents/Feb242017/app/src/buttons.css",
+		"/Users/katief/Documents/Feb242017/app/src/index.scss",
+		"/Users/katief/Documents/Feb242017/app/src/_variables.scss",
+		"/Users/katief/Documents/inkblotty.github.io/.gitignore",
+		"/Users/katief/Documents/inkblotty.github.io/README.md",
+		"/Users/katief/Desktop/BCG/srts/src/SSO/DocumentBundle/Controller/DocumentAjaxController.php",
+		"/Users/katief/Desktop/BCG/srts/src/SSO/DataBundle/Controller/AgencyController.php",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/components/table/ExpandableTableFiltering.jsx",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/components/table/FiltersContacts.jsx",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/components/table/Filters.jsx",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/pages/partials/Tables/FRATablePageView.jsx",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/pages/partials/Tables/ContractorTaskTable.jsx",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/pages/partials/Tables/ModesTable.jsx",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/pages/partials/EHC-views/ThreeYearPageView.jsx",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/pages/partials/EHC-views/HazardPageView.jsx",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/pages/partials/EHC-views/EventsPageView.jsx",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/pages/partials/EHC-views/CapPageView.jsx",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/pages/partials/Annual/CoordinationPage.jsx",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/pages/partials/Agency/AgencyAddressPageView.jsx",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/pages/partials/Annual/ChecklistItem.jsx",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/pages/partials/Annual/ReportChecklist.jsx",
+		"/Users/katief/Desktop/BCG/srts/src/SSO/DataBundle/Controller/BaseController.php",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/components/table/AuthorityTable.jsx",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/pages/partials/Contacts/ContactIndividualView.jsx",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/pages/partials/Agency/StateAgenciesColumn.jsx",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/pages/partials/Annual/AnnualSubmissionsPage.jsx",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-common/components/form/AccordionForm.jsx",
+		"/Users/katief/Desktop/BCG/srts/src/SSO/DataBundle/Entity/Incident.php",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/pages/partials/Annual/ReportingStatusColumn.jsx",
+		"/Users/katief/Desktop/BCG/srts/src/SSO/DataBundle/Resources/config/routing.yml",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/pages/partials/Contacts/ContactsPage.jsx",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/pages/partials/Annual/AnnualReportPage.jsx",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/components/EHC/EHCMediaObject.jsx",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/components/EHC/EHCColumnContainer.jsx",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-common/components/form/SelectMenu.jsx",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/pages/partials/Tables/CapTablePageView.jsx",
+		"/Users/katief/Desktop/BCG/srts/src/SSO/DataBundle/Controller/CapController.php",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/pages/partials/Tables/ContactsTable.jsx",
+		"/Users/katief/Desktop/BCG/srts/src/SSO/DataBundle/Repository/AnnualReportRepository.php",
+		"/Users/katief/Desktop/BCG/srts/src/SSO/DataBundle/Repository/IncidentRepository.php",
+		"/Users/katief/Desktop/BCG/srts/src/SSO/DataBundle/Entity/Agency.php",
+		"/Users/katief/Desktop/BCG/srts/src/SSO/DataBundle/Entity/AnnualReport.php",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/pages/partials/Tables/EventTablePageView.js",
+		"/Users/katief/Desktop/BCG/srts/src/SSO/DocumentBundle/Entity/Document.php",
+		"/Users/katief/Desktop/BCG/srts/src/SSO/DocumentBundle/Controller/DocumentController.php",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/pages/partials/Documents/DocumentForm.jsx",
+		"/Users/katief/Desktop/BCG/srts/src/SSO/DocumentBundle/Command/SetEffectiveDateOnOldDocsCommand.php",
+		"/Users/katief/Desktop/BCG/srts/src/BCG/CommonBundle/Command/DbDumpCommand.php",
+		"/Users/katief/Desktop/BCG/srts/src/SSO/DocumentBundle/Repository/DocumentRepository.php",
+		"/Users/katief/Desktop/BCG/srts/src/SSO/DataBundle/Controller/EventController.php",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/components/EHC/EHCColumnExpandableInputs.jsx",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/pages/partials/Forms/ContactForm.jsx",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/pages/partials/Forms/partials/EventImpact.jsx",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/components/EHC/EHCColumnExpandable.jsx",
+		"/Users/katief/Desktop/BCG/srts/src/SSO/ContactBundle/Controller/BaseController.php",
+		"/Users/katief/Desktop/BCG/srts/src/SSO/ContactBundle/Controller/NewContactController.php",
+		"/Users/katief/Desktop/BCG/srts/src/SSO/ContactBundle/Repository/ContactRepository.php",
+		"/Users/katief/Desktop/BCG/srts/ui/patternlab/source/scss/ssoCore/utilities.scss",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/pages/partials/Forms/CoordinationForm.jsx",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/pages/partials/Forms/ContractorTaskForm.jsx",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/pages/partials/Modals/WarningModal.jsx",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/pages/partials/Forms/FRAWaiverForm.jsx",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/pages/partials/Forms/HoursWorkedForm.jsx",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/apps/Admin.jsx",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/pages/partials/Agency/AgencyModeView.jsx",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/pages/partials/Agency/AgencyModeForm.jsx",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/pages/partials/Agency/AgencyModeEditForm.jsx",
+		"/Users/katief/Desktop/BCG/srts/src/SSO/DataBundle/Controller/ModesController.php",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/pages/partials/Forms/AuthorityForm.jsx",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/pages/partials/Forms/AgencyAddressForm.jsx",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/pages/partials/Modals/SixSevenFourModal.jsx",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-common/components/Modal.jsx",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/pages/partials/Forms/CapForm.jsx",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/pages/partials/Forms/ThreeYearForm.jsx",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/pages/partials/Forms/HazardForm.jsx",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/pages/partials/Forms/EventForm.jsx",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/pages/partials/Forms/partials/CauseCorrectiveAction.jsx",
+		"/Users/katief/Desktop/BCG/srts/src/SSO/DataBundle/Command/ConfirmValidate2014RecordsCommand.php",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/components/CorrectiveAction.jsx",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/pages/partials/Agency/SixSevenFourPageView.jsx",
+		"/Users/katief/Desktop/BCG/srts/src/SSO/DataBundle/Command/AddIsSnapshotToAgencyCommand.php",
+		"/Users/katief/Desktop/BCG/srts/src/SSO/DataBundle/Command/MigrateSnapshotsBackCommand.php",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-common/components/form/Checkboxes.jsx",
+		"/Users/katief/Desktop/BCG/srts/src/SSO/DataBundle/Repository/AgencyRepository.php",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/pages/partials/Documents/DocumentsTable.jsx",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-common/components/form/TelephoneInput.jsx",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/components/layout/SubHeader.jsx",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/pages/partials/Agency/SSOASidebar.jsx",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/pages/partials/Agency/RFGPTSSidebar.jsx",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-common/components/form/TextBox.jsx",
+		"/Users/katief/Desktop/BCG/srts/src/SSO/DocumentBundle/Resources/config/routing.yml",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/pages/partials/Documents/DocumentsPageWrapper.jsx",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/pages/partials/Forms/partials/AddRecord.jsx",
+		"/Users/katief/Desktop/BCG/srts/src/SSO/DataBundle/Repository/AgencyModeRepository.php",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/pages/partials/Forms/partials/EventDetails.jsx",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/pages/partials/Annual/ManageAnnualReportBox.jsx",
+		"/Users/katief/Desktop/BCG/srts/src/SSO/DataBundle/Repository/TimeSeriesDataRepository.php",
+		"/Users/katief/Desktop/BCG/srts/src/SSO/DataBundle/Repository/ThreeYearReviewOngoingDetailRepository.php",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/pages/partials/Annual/ContractorTasks.jsx",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/pages/partials/Annual/ContractorConfirmation.jsx",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/pages/partials/Annual/ReportingStatusProgress.jsx",
+		"/Users/katief/Desktop/BCG/srts/ui/patternlab/source/scss/ssoComponents/_ssoAnnual.scss",
+		"/Users/katief/Desktop/BCG/srts/gulpfile.js",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-common/components/accordion/AccordionSimple.jsx",
+		"/Users/katief/Desktop/BCG/srts/src/SSO/DataBundle/Repository/ThreeYearReviewRepository.php",
+		"/Users/katief/Desktop/BCG/srts/src/SSO/DataBundle/Command/PopulateAnnualReportCommand.php",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-common/components/accordion/AccordionItemSimple.jsx",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-common/components/form/DateInput.jsx",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-common/components/form/TextField.jsx",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/pages/partials/Forms/partials/CorrectiveAction.jsx",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-common/helpers/validation.js",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-common/components/form/Radios.jsx",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-common/components/form/FileInput.jsx",
+		"/Users/katief/Desktop/BCG/srts/src/SSO/DataBundle/Repository/HazardRepository.php",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-common/redux/reducers/forms.jsx",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-common/redux/actions/form.jsx",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/components/layout/FormHeader.jsx",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-common/components/form/ReduxForm.jsx",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-common/components/form/ExampleForm.jsx",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/pages/partials/Forms/partials/CapDetails.jsx",
+		"/Users/katief/Desktop/BCG/srts/src/SSO/DataBundle/Command/NewAnnualReportYearCommand.php",
+		"/Users/katief/Desktop/BCG/srts/src/SSO/DataBundle/Repository/CAPRepository.php",
+		"/Users/katief/Desktop/BCG/srts/src/SSO/DataBundle/Command/MigrateOldSnapshotsCommand.php",
+		"/Users/katief/Desktop/BCG/srts/src/SSO/DataBundle/Entity/TimeSeriesData.php",
+		"/Users/katief/Desktop/BCG/srts/ui/patternlab/source/scss/ssoComponents/_ssoButtons.scss",
+		"/Users/katief/Desktop/BCG/srts/resources/js/bcg-sso/pages/partials/Tables/ThreeYearReviewTablePageView.jsx"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 94.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"Incident ",
+			"'Incident",
+			"getconfirmationdate",
+			"checklistaction",
+			"Confirmation",
+			"console",
+			"findConfirme",
+			"Confirmed",
+			"inj",
+			"effectiveDate",
+			"this.findConfirmed",
+			"effectivedate",
+			"d.created >",
+			"d.created <",
+			"date",
+			" Date(",
+			"Date(",
+			"upload",
+			"'Passenger_'",
+			"saveeventnew",
+			"aria-labeledby",
+			"aria-labelledb",
+			"contactsbyagency",
+			"documentform",
+			"certificate",
+			"annual-report",
+			"annualreport",
+			"issnapshot",
+			"state",
+			"checklist",
+			"causalFactor",
+			"confirmButton",
+			"typeaction",
+			"type",
+			"typeAction",
+			"type",
+			"savechecklist",
+			"checklist",
+			"contactsbyagency",
+			"phoneformat",
+			"orderby",
+			"contactTyp",
+			"finalImplementation",
+			"persist",
+			"getall",
+			"\t",
+			"getallagencies",
+			"flex-start",
+			"margin-top:",
+			"unstyled",
+			"checklist",
+			"    ",
+			"min-width:",
+			"allvalid",
+			"this.context.formId",
+			"FormSection",
+			"this.props.currRecord",
+			"formId",
+			"names[i]",
+			"this.props.name",
+			"this.props.input.name",
+			"    ",
+			"currRecord",
+			"threeyearreview",
+			"three-year-review",
+			"this.props.name",
+			"this.",
+			"this.state",
+			"this.props",
+			"hot",
+			"hot-loader",
+			"contactType",
+			"console.log",
+			"    ",
+			"selectedAgency",
+			"cap",
+			"    ",
+			"hazard",
+			"console.log",
+			"three-year",
+			"console.log",
+			"destroyAlert",
+			"console.",
+			"comment",
+			"getcontacts",
+			"contactsbyagency",
+			"mode",
+			"data = this.props.allData",
+			"contactsbyagency",
+			"region",
+			"contacttype",
+			"allTypes",
+			"contacttype",
+			"contactsbyagency",
+			"ehcTitle",
+			"getassociatedagencyIds",
+			"getcontacts",
+			"isenabled",
+			"getactiveagenciesasarray",
+			"getsinglessoaAgency",
+			"getactiveagenciesasarray",
+			"getssoa",
+			"getsoa",
+			"getall",
+			"settitle",
+			"DESC",
+			"ASC",
+			"removeCorrectiveAction",
+			"var_dump",
+			"getcaby",
+			"snapshot",
+			"fra",
+			"margin-left",
+			"source",
+			"reviewed",
+			"getreviewed",
+			"setreviewed",
+			"reviewed",
+			"d.agency",
+			"margin-left",
+			"coordination",
+			"nullable=",
+			"confirmed",
+			"ssostatus",
+			"status",
+			"validation ",
+			"confirm",
+			"console"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 24.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 98.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 98.0
+	},
+	"pinned_build_system": "",
+	"project": "blotTask.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"base.html.twig",
+				"src/SSO/DesignBundle/Resources/views/base.html.twig"
+			],
+			[
+				"contactstable",
+				"resources/js/bcg-sso/pages/partials/Tables/ContactsTable.jsx"
+			],
+			[
+				"expandable",
+				"resources/js/bcg-sso/components/table/ExpandableTableFiltering.jsx"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 280.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
