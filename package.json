@@ -22,9 +22,11 @@
   },
   "homepage": "https://github.com/inkblotty/blotTask#readme",
   "dependencies": {
+    "body-parser": "^1.17.1",
     "express": "^4.15.2",
+    "mongoose": "^4.8.6",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2",
+    "react-dom": "^15.4.2"
   },
   "devDependencies": {
     "react-router": "^3.0.2"
