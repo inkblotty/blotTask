@@ -3,16 +3,17 @@ var bodyParser = require('body-parser');
 var mongodb = require('mongodb');
 
 var ObjectID = mongodb.ObjectID;
-var TASKS_COLLECTION = 'tasks';
+var USERS_COLLECTION = 'users';
 
 var app = express();
+var path = require('path');
 app.use(bodyParser.json());
 
 // Create a database variable outside of the database connection callback to reuse the connection pool in your app.
 var db;
 
 // Connect to the database before starting the application server.
-mongodb.MongoClient.connect(process.env.MONGODB_URI, function (err, database) {
+mongodb.MongoClient.connect("mongodb://Kathleens-MacBook-Pro.local/data", function (err, database) {
   if (err) {
     console.log(err);
     process.exit(1);
@@ -26,5 +27,21 @@ mongodb.MongoClient.connect(process.env.MONGODB_URI, function (err, database) {
   var server = app.listen(process.env.PORT || 8080, function () {
     var port = server.address().port;
     console.log('App now running on port', port);
+  });
+});
+
+app.use('/', express.static(path.join(__dirname, 'public')))
+
+// app.get('/', function(req, res) {
+// 	res.send('Hello World');
+// })
+
+app.get('/api', function(req, res) {
+  db.collection('users').find({}).toArray(function(err, docs) {
+    if (err) {
+      console.log('Error:');
+      console.log(err);
+    }
+    res.send(docs);
   });
 });
