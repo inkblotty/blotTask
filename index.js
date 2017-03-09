@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 var db;
 
 // Connect to the database before starting the application server.
-mongodb.MongoClient.connect("mongodb://Kathleens-MacBook-Pro.local", function (err, database) {
+mongodb.MongoClient.connect("mongodb://Kathleens-MacBook-Pro.local/data", function (err, database) {
   if (err) {
     console.log(err);
     process.exit(1);
@@ -37,7 +37,6 @@ app.use('/', express.static(path.join(__dirname, 'public')))
 // })
 
 app.get('/api', function(req, res) {
-  console.log(db.listCollections());
   db.collection('users').find({}).toArray(function(err, docs) {
     if (err) {
       console.log('Error:');
