@@ -45,29 +45,63 @@ router.get('/', function(req, res) {
   });
 });
 
-// route to create new user
-router.route('/users/')
-  .post(function(req, res) {
+// this is for debugging only
+app.use('/empty', function(req, res) {
+  users.remove();
+  res.send('users collection emptied');
+});
 
+var newUser = {
+      "display_name": "Frankie Bernstein",
+      "id": "0002",
+      "username": "hippy_Grandma",
+      "tasks": {
+        "03/12/2017": [
+          {
+            "id": "000023", 
+            "description": "Pottery Class",
+            "time": "10:15:00",
+            "length": 90,
+            "style": "green"
+          }
+        ]
+      }
+    };
+
+// route to create new user
+router.route('/users')
+  .post(function(req, res) {
+    users.insert(req);
+    res.send('new user added');
   });
 
 router.route('/users/:user_id')
   .get(function(req, res) {
-    users.find({ id: req.params.user_id }).toArray(function(err, user) {
+    // build query from params
+    var userId = req.params.user_id;
+    var query = { 'id': userId };
+    // query = {$elemMatch: {id: userId}};
+
+    console.log(query);
+
+    users.find(query).toArray(function(err, user) {
       res.send(user);
     });
   })
   .put(function(req, res) {
-    users.find({ id: req.params.user_id }).toArray(function(err, user) {
+    var userId = req.params.user_id;
+    var query = { 'id': userId };
+    // query = {$elemMatch: {id: userId}};
+    
+    users.find(query).toArray(function(err, user) {
       if (err) {
         res.send(err);
       }
 
       users.update(
-        { "id" : req.params.user_id },
+        query,
         { $set: {
-            "name": req.body.name,
-            "tasks": req.body.taskList
+            "display_name": req.body.display_name,
           }
         }
       );
@@ -76,6 +110,6 @@ router.route('/users/:user_id')
         res.send(err);
       }
 
-      res.json({ message: 'Update successful', userId: req.params.user_id });
+      res.json({ message: 'Update successful', id: req.params.user_id });
     });
   });

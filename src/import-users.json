@@ -1,24 +1,23 @@
 {
-	"0001": {
-		"username": "Eliot Waugh",
-		"id": "0001",
-		"tasks": {
-			"03/08/2017": [
-				{
-					"id": "0001001", 
-					"description": "Lunch meeting with Quentin",
-					"time": "12:30:00",
-					"length": 60,
-					"style": "red"
-				},
-				{
-					"id": "0001002",
-					"description": "Gym",
-					"datetime": "13:45:00",
-					"length": 60,
-					"style": "red"
-				}
-			]
-		}
+	"display_name": "Eliot Waugh",
+	"id": "0001",
+	"username": "ChampagneKing",
+	"tasks": {
+		"03/08/2017": [
+			{
+				"id": "000001", 
+				"description": "Lunch meeting with Quentin",
+				"time": "12:30:00",
+				"length": 60,
+				"style": "red"
+			},
+			{
+				"id": "000002",
+				"description": "Gym",
+				"datetime": "13:45:00",
+				"length": 60,
+				"style": "red"
+			}
+		]
 	}
 }
