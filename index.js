@@ -7,10 +7,12 @@ var USERS_COLLECTION = 'users';
 
 var app = express();
 var path = require('path');
+var router = express.Router();
 app.use(bodyParser.json());
 
 // Create a database variable outside of the database connection callback to reuse the connection pool in your app.
 var db;
+var users;
 
 // Connect to the database before starting the application server.
 mongodb.MongoClient.connect("mongodb://Kathleens-MacBook-Pro.local/data", function (err, database) {
@@ -21,6 +23,7 @@ mongodb.MongoClient.connect("mongodb://Kathleens-MacBook-Pro.local/data", functi
 
   // Save database object from the callback for reuse.
   db = database;
+  users = db.collection('users');
   console.log('Database connection ready');
 
   // Initialize the app.
@@ -30,18 +33,49 @@ mongodb.MongoClient.connect("mongodb://Kathleens-MacBook-Pro.local/data", functi
   });
 });
 
-app.use('/', express.static(path.join(__dirname, 'public')))
+app.use('/', express.static(path.join(__dirname, 'public')));
+app.use('/api', router);
 
-// app.get('/', function(req, res) {
-// 	res.send('Hello World');
-// })
-
-app.get('/api', function(req, res) {
-  db.collection('users').find({}).toArray(function(err, docs) {
+router.get('/', function(req, res) {
+  users.find({}).toArray(function(err, docs) {
     if (err) {
-      console.log('Error:');
       console.log(err);
     }
-    res.send(docs);
+    res.json(docs);
   });
 });
+
+// route to create new user
+router.route('/users/')
+  .post(function(req, res) {
+
+  });
+
+router.route('/users/:user_id')
+  .get(function(req, res) {
+    users.find({ id: req.params.user_id }).toArray(function(err, user) {
+      res.send(user);
+    });
+  })
+  .put(function(req, res) {
+    users.find({ id: req.params.user_id }).toArray(function(err, user) {
+      if (err) {
+        res.send(err);
+      }
+
+      users.update(
+        { "id" : req.params.user_id },
+        { $set: {
+            "name": req.body.name,
+            "tasks": req.body.taskList
+          }
+        }
+      );
+
+      if (err) {
+        res.send(err);
+      }
+
+      res.json({ message: 'Update successful', userId: req.params.user_id });
+    });
+  });
