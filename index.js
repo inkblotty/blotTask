@@ -98,6 +98,8 @@ router.route('/users/:user_id')
         res.send(err);
       }
 
+      console.log(req.body);
+
       users.update(
         query,
         { $set: {
@@ -110,6 +112,6 @@ router.route('/users/:user_id')
         res.send(err);
       }
 
-      res.json({ message: 'Update successful', id: req.params.user_id });
+      res.json({ status: 200, message: 'Update successful', user: user });
     });
   });
