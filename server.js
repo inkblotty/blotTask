@@ -27,7 +27,7 @@ mongodb.MongoClient.connect("mongodb://Kathleens-MacBook-Pro.local/data", functi
   console.log('Database connection ready');
 
   // Initialize the app.
-  var server = app.listen(process.env.PORT || 8080, function () {
+  var server = app.listen(process.env.PORT || 3000, function () {
     var port = server.address().port;
     console.log('App now running on port', port);
   });
@@ -35,7 +35,11 @@ mongodb.MongoClient.connect("mongodb://Kathleens-MacBook-Pro.local/data", functi
 
 app.use('/', express.static(path.join(__dirname, 'public')));
 app.use('/api', router);
+app.get('/', function(request, response) {
+  response.sendFile(__dirname + '/public/index.html')
+});
 
+// API routes
 router.get('/', function(req, res) {
   users.find({}).toArray(function(err, docs) {
     if (err) {
