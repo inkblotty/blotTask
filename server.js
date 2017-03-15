@@ -6,6 +6,7 @@ var ObjectID = mongodb.ObjectID;
 var USERS_COLLECTION = 'users';
 
 var app = express();
+var cors = require('cors');
 var path = require('path');
 var router = express.Router();
 app.use(bodyParser.json());
@@ -33,6 +34,7 @@ mongodb.MongoClient.connect("mongodb://Kathleens-MacBook-Pro.local/data", functi
   });
 });
 
+app.use(cors());
 app.use('/', express.static(path.join(__dirname, 'public')));
 app.use('/api', router);
 app.get('/', function(request, response) {
@@ -102,7 +104,7 @@ router.route('/users/:user_id')
         res.send(err);
       }
 
-      console.log(req.body);
+      console.log(user);
 
       users.update(
         query,
@@ -112,10 +114,6 @@ router.route('/users/:user_id')
         }
       );
 
-      if (err) {
-        res.send(err);
-      }
-
-      res.json({ status: 200, message: 'Update successful', user: user });
+      res.json({ status: 200, message: 'Update successful', user: user[0] });
     });
   });
