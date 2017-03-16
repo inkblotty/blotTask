@@ -7,8 +7,7 @@ const API = axios.create({
 	transformRequest: [(data) => JSON.stringify(data)],
 	headers: {
 		'Accept': 'application/json',
-		'Content-type': 'application/json',
-		// 'Access-Control-Allow-Origin': '*'
+		'Content-type': 'application/json'
 	}
 });
 
