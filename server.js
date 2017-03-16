@@ -97,23 +97,41 @@ router.route('/users/:user_id')
   .put(function(req, res) {
     var userId = req.params.user_id;
     var query = { 'id': userId };
+    console.log(req);
     // query = {$elemMatch: {id: userId}};
     
+    // users.find(query).toArray(function(err, user) {
+    //   if (err) {
+    //     res.send(err);
+    //   }
+
+    //   console.log(user);
+
+    //   users.update(
+    //     query,
+    //     { $set: {
+    //         "display_name": req.body.display_name,
+    //       }
+    //     }
+    //   );
+
+    //   console.log(user);
+
+    //   res.json({ status: 200, message: 'Update successful', user: user[0] });
+    // });
+
+    users.update(query,
+      { $set: {
+          "display_name": req.body.display_name,
+        }
+      }
+    );
+
     users.find(query).toArray(function(err, user) {
       if (err) {
         res.send(err);
       }
-
       console.log(user);
-
-      users.update(
-        query,
-        { $set: {
-            "display_name": req.body.display_name,
-          }
-        }
-      );
-
       res.json({ status: 200, message: 'Update successful', user: user[0] });
     });
   });

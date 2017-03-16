@@ -6,7 +6,7 @@ const Welcome = (props) => {
 			Welcome { props.currentUser['display_name'] }
 			<input type='text' onChange={ props.updateUser } />
 			<button onClick={ props.sendUserUpdates }>
-				Update Username
+				Update Display Name
 			</button>
 		</div>
 	)
