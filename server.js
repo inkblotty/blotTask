@@ -57,23 +57,6 @@ app.use('/empty', function(req, res) {
   res.send('users collection emptied');
 });
 
-var newUser = {
-      "display_name": "Frankie Bernstein",
-      "id": "0002",
-      "username": "hippy_Grandma",
-      "tasks": {
-        "03/12/2017": [
-          {
-            "id": "000023", 
-            "description": "Pottery Class",
-            "time": "10:15:00",
-            "length": 90,
-            "style": "green"
-          }
-        ]
-      }
-    };
-
 // route to create new user
 router.route('/users')
   .post(function(req, res) {
@@ -86,9 +69,6 @@ router.route('/users/:user_id')
     // build query from params
     var userId = req.params.user_id;
     var query = { 'id': userId };
-    // query = {$elemMatch: {id: userId}};
-
-    console.log(query);
 
     users.find(query).toArray(function(err, user) {
       res.send(user);
@@ -97,41 +77,18 @@ router.route('/users/:user_id')
   .put(function(req, res) {
     var userId = req.params.user_id;
     var query = { 'id': userId };
-    console.log(req);
-    // query = {$elemMatch: {id: userId}};
-    
-    // users.find(query).toArray(function(err, user) {
-    //   if (err) {
-    //     res.send(err);
-    //   }
-
-    //   console.log(user);
-
-    //   users.update(
-    //     query,
-    //     { $set: {
-    //         "display_name": req.body.display_name,
-    //       }
-    //     }
-    //   );
-
-    //   console.log(user);
-
-    //   res.json({ status: 200, message: 'Update successful', user: user[0] });
-    // });
 
     users.update(query,
       { $set: {
           "display_name": req.body.display_name,
         }
       }
-    );
-
-    users.find(query).toArray(function(err, user) {
-      if (err) {
-        res.send(err);
-      }
-      console.log(user);
-      res.json({ status: 200, message: 'Update successful', user: user[0] });
+    , function() {
+      users.find(query).toArray(function(err, user) {
+        if (err) {
+          res.send(err);
+        }
+        res.json({ status: 200, message: 'Update successful', user: user[0] });
+      });
     });
   });

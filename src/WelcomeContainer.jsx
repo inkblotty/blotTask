@@ -14,25 +14,22 @@ class WelcomeContainer extends React.Component {
 		router: React.PropTypes.object,
 	}
 
-	updateUser = (e) => {
-		let displayName = e.target.value;
-
+	sendUserUpdates = (userVal) => {
 		let newUser = this.state.currentUser;
-		newUser['display_name'] = displayName;
+		newUser['display_name'] = userVal;
+
+		console.log(newUser);
 
 		this.setState({
 			currentUser: newUser,
-		});
-	}
-
-	sendUserUpdates = () => {
-		API.put(`http://localhost:3000/api/users/${this.state.currentUser.id}`, this.state.currentUser)
-			.then((response) => {
-				console.log(response);
-				this.setState({
-					currentUser: response.data.user,
+		}, () => {
+			API.put(`http://localhost:3000/api/users/${this.state.currentUser.id}`, this.state.currentUser)
+				.then((response) => {
+					this.setState({
+						currentUser: response.data.user,
+					});
 				});
-			});
+		});
 	}
 
 	componentDidMount = () => {
@@ -48,8 +45,7 @@ class WelcomeContainer extends React.Component {
 		const { currentUser } = this.state;
 
 		return (
-			<Welcome currentUser={ currentUser } updateUser={ this.updateUser }
-				sendUserUpdates={ this.sendUserUpdates } />
+			<Welcome currentUser={ currentUser } sendUserUpdates={ this.sendUserUpdates } />
 		);
 	}
 }
