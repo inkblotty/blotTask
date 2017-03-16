@@ -1,7 +1,6 @@
 import React from 'react';
 
 class Welcome extends React.Component {
-
 	static propTypes = {
 		currentUser: React.PropTypes.object.isRequired,
 		sendUserUpdates: React.PropTypes.func.isRequired,
