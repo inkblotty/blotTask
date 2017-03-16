@@ -1,14 +1,15 @@
 import axios from 'axios';
-// this is my api helper
 
-const API = axios.create({
-	baseUrl: 'http://localhost:3000/api',
-	timeout: 10000,
-	transformRequest: [(data) => JSON.stringify(data)],
-	headers: {
-		'Accept': 'application/json',
-		'Content-type': 'application/json'
-	}
-});
+export default class API {
+	static get = (path: string, data = null) => {
+		return axios.get(path, data);
+	};
 
-module.exports = API;
+	static post = (path: string, data = null) => {
+		return axios.post(path, data);
+	};
+
+	static put = (path: string, data = null) => {
+		return axios.put(path, data);
+	};
+}

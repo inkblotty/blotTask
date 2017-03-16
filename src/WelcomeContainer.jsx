@@ -26,24 +26,13 @@ class WelcomeContainer extends React.Component {
 	}
 
 	sendUserUpdates = () => {
-		// API.put(`http://localhost:3000/api/users/${this.state.currentUser.id}`, this.state.currentUser)
-		// 	.then((response) => {
-		// 		console.log(response);
-		// 		this.setState({
-		// 			currentUser: response.data.user,
-		// 		});
-		// 	});
-		API({
-			method: 'put',
-			url: `http://localhost:3000/api/users/${this.state.currentUser.id}`,
-			body: this.state.currentUser,
-		})
+		API.put(`http://localhost:3000/api/users/${this.state.currentUser.id}`, this.state.currentUser)
 			.then((response) => {
 				console.log(response);
 				this.setState({
 					currentUser: response.data.user,
 				});
-			})
+			});
 	}
 
 	componentDidMount = () => {
