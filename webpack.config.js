@@ -4,16 +4,17 @@ var path = require('path');
 
 module.exports = {
   entry: [
-    './src/app'
+    './src/app.js'
   ],
   module: {
     loaders: [
       { test: /\.js?$/, loader: 'babel', exclude: /node_modules/ },
+      { test: /\.jsx?$/, loader: 'babel', exclude: /node_modules/ },
       { test: /\.s?css$/, loader: 'style!css!sass' },
     ]
   },
   resolve: {
-    extensions: ['', '.js']
+    extensions: ['', '.js', '.jsx']
   },
   devServer: {
     proxy: {
@@ -23,6 +24,7 @@ module.exports = {
       }
     }
   },
+  devtool: 'eval-source-map',
   output: {
     path: path.join(__dirname, '/public'),
     publicPath: '/',

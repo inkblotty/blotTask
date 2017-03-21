@@ -6,6 +6,7 @@ var ObjectID = mongodb.ObjectID;
 var USERS_COLLECTION = 'users';
 
 var app = express();
+var cors = require('cors');
 var path = require('path');
 var router = express.Router();
 app.use(bodyParser.json());
@@ -33,6 +34,7 @@ mongodb.MongoClient.connect("mongodb://Kathleens-MacBook-Pro.local/data", functi
   });
 });
 
+app.use(cors());
 app.use('/', express.static(path.join(__dirname, 'public')));
 app.use('/api', router);
 app.get('/', function(request, response) {
@@ -55,23 +57,6 @@ app.use('/empty', function(req, res) {
   res.send('users collection emptied');
 });
 
-var newUser = {
-      "display_name": "Frankie Bernstein",
-      "id": "0002",
-      "username": "hippy_Grandma",
-      "tasks": {
-        "03/12/2017": [
-          {
-            "id": "000023", 
-            "description": "Pottery Class",
-            "time": "10:15:00",
-            "length": 90,
-            "style": "green"
-          }
-        ]
-      }
-    };
-
 // route to create new user
 router.route('/users')
   .post(function(req, res) {
@@ -79,14 +64,12 @@ router.route('/users')
     res.send('new user added');
   });
 
+// routes to read/update user
 router.route('/users/:user_id')
   .get(function(req, res) {
     // build query from params
     var userId = req.params.user_id;
     var query = { 'id': userId };
-    // query = {$elemMatch: {id: userId}};
-
-    console.log(query);
 
     users.find(query).toArray(function(err, user) {
       res.send(user);
@@ -95,27 +78,48 @@ router.route('/users/:user_id')
   .put(function(req, res) {
     var userId = req.params.user_id;
     var query = { 'id': userId };
-    // query = {$elemMatch: {id: userId}};
-    
-    users.find(query).toArray(function(err, user) {
-      if (err) {
-        res.send(err);
-      }
 
-      console.log(req.body);
-
-      users.update(
-        query,
-        { $set: {
-            "display_name": req.body.display_name,
-          }
+    users.update(query,
+      { $set: {
+          "display_name": req.body.display_name,
         }
-      );
-
-      if (err) {
-        res.send(err);
       }
+    , function() {
+      users.find(query).toArray(function(err, user) {
+        if (err) {
+          res.send(err);
+        }
+        res.json({ status: 200, message: 'Update successful', user: user[0] });
+      });
+    });
+  });
 
-      res.json({ status: 200, message: 'Update successful', user: user });
+// routes to read/update a users' task list
+router.route('/tasks/:user_id')
+  .get(function(req, res) {
+    // build query from params
+    var userId = req.params.user_id;
+    var query = { 'id': userId };
+
+    users.find(query).toArray(function(err, user) {
+      res.send(user[0].tasks);
+    });
+  })
+  .put(function(req, res) {
+    var userId = req.params.user_id;
+    var query = { 'id': userId };
+
+    users.update(query,
+      { $set: {
+          "tasks": req.body.tasks,
+        }
+      }
+    , function() {
+      users.find(query).toArray(function(err, user) {
+        if (err) {
+          res.send(err);
+        }
+        res.json({ status: 200, message: 'Update successful', user: user[0].tasks });
+      });
     });
   });
