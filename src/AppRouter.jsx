@@ -1,14 +1,14 @@
 import React from 'react';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
-import { connect } from 'react-redux';
+import { connect, Provider } from 'react-redux';
 
 import { createTask, updateTask, deleteTask, updateDisplayName } from './actions/actions';
 
 import WelcomeContainer from './Containers/WelcomeContainer';
 
-const AppRouter = () => {
+const AppRouter = (props) => {
   return (
-    <Provider store={ store }>
+    <Provider store={ props.store }>
       <Router history={ browserHistory }>
         <Route path='/' component={ WelcomeContainer } />
       </Router>

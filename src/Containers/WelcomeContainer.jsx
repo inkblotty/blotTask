@@ -14,6 +14,10 @@ class WelcomeContainer extends React.Component {
 		router: React.PropTypes.object,
 	}
 
+	static contextTypes = {
+		store: React.PropTypes.object,
+	}
+
 	sendUserUpdates = (userVal) => {
 		let newUser = this.state.currentUser;
 		newUser['display_name'] = userVal;
@@ -43,6 +47,8 @@ class WelcomeContainer extends React.Component {
 
 	render() {
 		const { currentUser } = this.state;
+
+		console.log(this.context.store);
 
 		return (
 			<Welcome currentUser={ currentUser } sendUserUpdates={ this.sendUserUpdates } />
