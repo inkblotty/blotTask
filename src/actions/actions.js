@@ -1,38 +1,40 @@
 /* action types */
 
 const CREATE_TASK = 'CREATE_TASK';
-const EDIT_TASK = 'EDIT_TASK';
-const REMOVE_TASK = 'REMOVE_TASK';
-const CHANGE_DISPLAY_NAME = 'CHANGE_DISPLAY_NAME';
+const UPDATE_TASK = 'UPDATE_TASK';
+const DELETE_TASK = 'DELETE_TASK';
+const UPDATE_DISPLAY_NAME = 'UPDATE_DISPLAY_NAME';
 
 /* action creators */
 
 export function createTask(text, date, time, duration) {
 	let props = { description, date, time, duration };
 	return {
-		type: 'CREATE_TASK',
+		type: CREATE_TASK,
 		...props
 	}
 }
 
-export function editTask(description, date, time, duration) {
+export function updateTask(taskId, description, date, time, duration) {
 	let props = { description, date, time, duration };
 	return {
-		type: 'EDIT_TASK',
+		type: UPDATE_TASK,
+		taskId,
 		...props
 	}
 }
 
-export function removeTask(taskId) {
+export function deleteTask(taskId, taskDate) {
 	return {
-		type: 'REMOVE_TASK',
-		taskId
+		type: DELETE_TASK,
+		taskId,
+		taskDate
 	}
 }
 
-export function changeDisplayName(userId, newName) {
+export function updateDisplayName(userId, newName) {
 	return {
-		type: 'CHANGE_DISPLAY_NAME',
+		type: UPDATE_DISPLAY_NAME,
 		userId,
 		newName,
 	}
