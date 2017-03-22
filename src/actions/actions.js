@@ -7,7 +7,7 @@ const UPDATE_DISPLAY_NAME = 'UPDATE_DISPLAY_NAME';
 
 /* action creators */
 
-export function createTask(text, date, time, duration) {
+export function createTask(description, date, time, duration) {
 	let props = { description, date, time, duration };
 	return {
 		type: CREATE_TASK,
