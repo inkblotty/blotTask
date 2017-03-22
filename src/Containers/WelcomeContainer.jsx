@@ -1,7 +1,7 @@
 import React from 'react';
-import API from './API/API';
+import API from '../API/API';
 
-import Welcome from './Components/Welcome';
+import Welcome from '../Components/Welcome';
 
 class WelcomeContainer extends React.Component {
 

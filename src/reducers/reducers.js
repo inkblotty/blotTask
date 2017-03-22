@@ -7,9 +7,9 @@ const initialState = {
 }
 
 function blotTaskApp(state = initialState, action) {
+  let newTasks = state.tasks;
   switch (action.type) {
-    case CREATE_TASK:
-      let newTasks = state.tasks;
+    case 'CREATE_TASK':
       if (!newTasks[action.date]) {
         newTasks[action.date] = [];
       }
@@ -24,8 +24,7 @@ function blotTaskApp(state = initialState, action) {
       );
       return { ...state, tasks: newTasks };
 
-    case UPDATE_TASK:
-      let newTasks = state.tasks;
+    case 'UPDATE_TASK':
       newTask[actions.date] = newTasks[action.date].map((task) => {
         if (task.id === action.taskId) {
           task.description = action.description;
@@ -36,8 +35,7 @@ function blotTaskApp(state = initialState, action) {
 
       return { ...state, tasks: newTasks };
 
-    case DELETE_TASK:
-      let newTasks = state.tasks;
+    case 'DELETE_TASK':
       let index = 0;
       let task = newTasks[action.date].filter((task, i) => {
         if (task.id === action.taskId) { index = i; }
@@ -47,7 +45,7 @@ function blotTaskApp(state = initialState, action) {
 
       return { ...state, tasks: newTasks };
 
-    case UPDATE_DISPLAY_NAME:
+    case 'UPDATE_DISPLAY_NAME':
       let newUser = state.currentUser;
       if (!state.currentUser.id === action.userId) {
         throw new Error('Tried to select inactive user. You must be signed in to change that username');

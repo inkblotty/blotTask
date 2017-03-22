@@ -4,11 +4,12 @@ import { connect, Provider } from 'react-redux';
 
 import { createTask, updateTask, deleteTask, updateDisplayName } from './actions/actions';
 
+import store from './store.js';
 import WelcomeContainer from './Containers/WelcomeContainer';
 
-const AppRouter = (props) => {
+const AppRouter = () => {
   return (
-    <Provider store={ props.store }>
+    <Provider store={ store }>
       <Router history={ browserHistory }>
         <Route path='/' component={ WelcomeContainer } />
       </Router>
@@ -30,7 +31,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
       dispatch(createTask(description, date, time, duration))
     },
     updateTask: (taskId, description, date, time, duration) => {
-      dispatch(updateTask(taskId, description, date, time, duration)))
+      dispatch(updateTask(taskId, description, date, time, duration))
     },
     deleteTask: (taskId, taskDate) => {
       dispatch(deleteTask(taskId, taskDate))
@@ -41,9 +42,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   }
 }
 
-AppRouter = connect(
+export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(AppRouter);
-
-export default AppRouter;

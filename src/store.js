@@ -4,4 +4,4 @@ import blotTaskApp from './reducers/reducers'
 
 let store = createStore(blotTaskApp);
 
-module.exports = store;
+export default store;
