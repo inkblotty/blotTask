@@ -1,6 +1,7 @@
-import {createStore} from 'redux';
-import reducer from './reducer';
+import { createStore } from 'redux';
+import { connect } from 'react-redux';
+import blotTaskApp from './reducers/reducers'
 
-export default function makeStore() {
-  return createStore(reducer);
-}
+let store = createStore(blotTaskApp);
+
+module.exports = store;
