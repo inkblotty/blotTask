@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
-    "test": "test"
+    "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js  --recursive"
   },
   "repository": {
     "type": "git",
@@ -46,6 +46,8 @@
     "webpack": "^1.12.14"
   },
   "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0",
     "webpack-dev-middleware": "^1.6.1",
     "webpack-dev-server": "^1.14.1",
     "webpack-hot-middleware": "^2.10.0"

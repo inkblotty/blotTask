@@ -1,7 +1,7 @@
 import React from 'react';
-import API from './API/API';
+import API from '../API/API';
 
-import Welcome from './Components/Welcome';
+import Welcome from '../Components/Welcome';
 
 class WelcomeContainer extends React.Component {
 
@@ -12,6 +12,10 @@ class WelcomeContainer extends React.Component {
 	static propTypes = {
 		params: React.PropTypes.object,
 		router: React.PropTypes.object,
+	}
+
+	static contextTypes = {
+		store: React.PropTypes.object,
 	}
 
 	sendUserUpdates = (userVal) => {
@@ -43,6 +47,8 @@ class WelcomeContainer extends React.Component {
 
 	render() {
 		const { currentUser } = this.state;
+
+		console.log(this.context.store);
 
 		return (
 			<Welcome currentUser={ currentUser } sendUserUpdates={ this.sendUserUpdates } />
