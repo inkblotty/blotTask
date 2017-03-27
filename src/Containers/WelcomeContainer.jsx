@@ -22,7 +22,7 @@ class WelcomeContainer extends React.Component {
 		let newUser = this.state.currentUser;
 		newUser['display_name'] = userVal;
 
-		console.log(newUser);
+		// console.log(newUser);
 
 		this.setState({
 			currentUser: newUser,
