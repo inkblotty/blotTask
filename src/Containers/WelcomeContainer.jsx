@@ -16,13 +16,13 @@ class WelcomeContainer extends React.Component {
 	};
 
 	sendUserUpdates = (userVal) => {
-		this.context.store.dispatch(updateDisplayName(this.context.store.getState().currentUser.id, userVal))
-		.then(() => {
-			API.put(`http://localhost:3000/api/users/${this.context.store.getState().currentUser.id}`, this.context.store.getState().currentUser)
-				.then((response) => {
-					this.context.store.dispatch(updateUser(response.data.user));
-				});
-		});
+		let newUser = this.context.store.getState().currentUser;
+		newUser['display_name'] = userVal;
+
+		API.put(`http://localhost:3000/api/users/${this.context.store.getState().currentUser.id}`, newUser)
+			.then((response) => {
+				this.context.store.dispatch(updateUser(response.data.user));
+			});
 	}
 
 	componentDidMount = () => {
