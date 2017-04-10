@@ -23,20 +23,22 @@ class WelcomeContainer extends React.Component {
 			.then((response) => {
 				this.context.store.dispatch(updateUser(response.data.user));
 			});
-	}
+	};
 
 	componentDidMount = () => {
 		API.get('http://localhost:3000/api')
 			.then((response) => {
 				this.context.store.dispatch(updateUser(response.data[0]));
 			});
-	}
+	};
 
 	render() {
-		const { currentUser } = this.context.store.getState() || {};
+		const { currentUser, tasks } = this.context.store.getState() || {};
+		let today = new Date();
+		today = `${ today.getMonth()+1 < 10 ? '0'+(today.getMonth()+1) : today.getMonth()+1}-${today.getDay() < 10 ? '0'+today.getDay() : today.getDay()}-${today.getFullYear()}`;
 
 		return (
-			<Welcome currentUser={ currentUser } sendUserUpdates={ this.sendUserUpdates } />
+			<Welcome currentUser={ currentUser } sendUserUpdates={ this.sendUserUpdates } tasks={ tasks[today] || [] } />
 		);
 	}
 }
