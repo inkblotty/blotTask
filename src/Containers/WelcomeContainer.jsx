@@ -1,35 +1,26 @@
 import React from 'react';
 import API from '../API/API';
+import { updateUser, updateDisplayName } from '../actions/actions';
 
 import Welcome from '../Components/Welcome';
 
 class WelcomeContainer extends React.Component {
 
-	state = {
-		currentUser: {},
-	}
-
 	static propTypes = {
 		params: React.PropTypes.object,
 		router: React.PropTypes.object,
-	}
+	};
 
 	static contextTypes = {
 		store: React.PropTypes.object,
-	}
+	};
 
 	sendUserUpdates = (userVal) => {
-		let newUser = this.state.currentUser;
-		newUser['display_name'] = userVal;
-
-		this.setState({
-			currentUser: newUser,
-		}, () => {
-			API.put(`http://localhost:3000/api/users/${this.state.currentUser.id}`, this.state.currentUser)
+		this.context.store.dispatch(updateDisplayName(this.context.store.getState().currentUser.id, userVal))
+		.then(() => {
+			API.put(`http://localhost:3000/api/users/${this.context.store.getState().currentUser.id}`, this.context.store.getState().currentUser)
 				.then((response) => {
-					this.setState({
-						currentUser: response.data.user,
-					});
+					this.context.store.dispatch(updateUser(response.data.user));
 				});
 		});
 	}
@@ -37,14 +28,12 @@ class WelcomeContainer extends React.Component {
 	componentDidMount = () => {
 		API.get('http://localhost:3000/api')
 			.then((response) => {
-				this.setState({
-					currentUser: response.data[0],
-				});
+				this.context.store.dispatch(updateUser(response.data[0]));
 			});
 	}
 
 	render() {
-		const { currentUser } = this.state;
+		const { currentUser } = this.context.store.getState() || {};
 
 		return (
 			<Welcome currentUser={ currentUser } sendUserUpdates={ this.sendUserUpdates } />
@@ -52,4 +41,4 @@ class WelcomeContainer extends React.Component {
 	}
 }
 
-module.exports = WelcomeContainer;
+export default WelcomeContainer;
