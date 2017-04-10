@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { connect, Provider } from 'react-redux';
 
 import AppRouter from './AppRouter';
+import { createTask, updateTask, deleteTask, updateDisplayName } from './actions/actions';
 import store from './store.js';
 
 const mapStateToProps = (state, ownProps) => {
@@ -31,7 +32,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
 }
 
 const Prov = () => {
-	<Provider store>
+	<Provider store={ store }>
 		<AppRouter />
 	</Provider>
 }
