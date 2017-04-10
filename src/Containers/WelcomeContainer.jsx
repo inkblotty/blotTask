@@ -22,8 +22,6 @@ class WelcomeContainer extends React.Component {
 		let newUser = this.state.currentUser;
 		newUser['display_name'] = userVal;
 
-		console.log(newUser);
-
 		this.setState({
 			currentUser: newUser,
 		}, () => {
@@ -47,8 +45,6 @@ class WelcomeContainer extends React.Component {
 
 	render() {
 		const { currentUser } = this.state;
-
-		console.log(this.context.store);
 
 		return (
 			<Welcome currentUser={ currentUser } sendUserUpdates={ this.sendUserUpdates } />
