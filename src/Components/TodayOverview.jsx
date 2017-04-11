@@ -10,7 +10,7 @@ const TodayOverview = (props) => {
 	});
 
 	return (
-		<div>
+		<div style={ {height: '80vh', width: '80vh'} }>
 			<h1>Today's Overview</h1>
 			<Bubble className='c-blot-bubble--static' duration={ 1440 }>
 				{ innerBubbles.length > 1 ? innerBubbles :

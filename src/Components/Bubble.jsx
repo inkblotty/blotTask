@@ -2,9 +2,11 @@ import React from 'react';
 import '../styles/bubble.scss';
 
 const Bubble = (props) => {
+	// duration is in minutes
+	// 24 hrs is 1440 min
 	let styles = {
-		height: `${props.duration}px`,
-		width: `${props.duration}px`
+		height: `${props.duration/1440*100}%`,
+		width: `${props.duration/1440*100}%`
 	};
 
 	return (
