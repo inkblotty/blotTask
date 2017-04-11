@@ -4,6 +4,7 @@ const CREATE_TASK = 'CREATE_TASK';
 const UPDATE_TASK = 'UPDATE_TASK';
 const DELETE_TASK = 'DELETE_TASK';
 const UPDATE_DISPLAY_NAME = 'UPDATE_DISPLAY_NAME';
+const UPDATE_USER_DATA = 'UPDATE_USER_DATA';
 
 /* action creators */
 
@@ -12,6 +13,13 @@ export function createTask(description, date, time, duration) {
 	return {
 		type: CREATE_TASK,
 		...props
+	}
+}
+
+export function updateUser(userData) {
+	return {
+		type: UPDATE_USER_DATA,
+		userData
 	}
 }
 

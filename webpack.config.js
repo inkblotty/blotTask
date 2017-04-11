@@ -10,7 +10,14 @@ module.exports = {
     loaders: [
       { test: /\.js?$/, loader: 'babel', exclude: /node_modules/ },
       { test: /\.jsx?$/, loader: 'babel', exclude: /node_modules/ },
-      { test: /\.s?css$/, loader: 'style!css!sass' },
+      { test: /\.scss$/, loader: 'style!css!sass', include: path.resolve(__dirname, 'src') },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        loaders: [
+          'url-loader?limit=10000',
+          'img-loader'
+        ]
+      }
     ]
   },
   resolve: {

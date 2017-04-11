@@ -8,6 +8,7 @@ const initialState = {
 
 function blotTaskApp(state = initialState, action) {
   let newTasks = state.tasks;
+  let newUser = state.currentUser;
   switch (action.type) {
     case 'CREATE_TASK':
       if (!newTasks[action.date]) {
@@ -45,8 +46,11 @@ function blotTaskApp(state = initialState, action) {
 
       return { ...state, tasks: newTasks };
 
+    case 'UPDATE_USER_DATA':
+      newUser = action.userData;
+      return { ...state, currentUser: newUser }
+
     case 'UPDATE_DISPLAY_NAME':
-      let newUser = state.currentUser;
       if (!state.currentUser.id === action.userId) {
         throw new Error('Tried to select inactive user. You must be signed in to change that username');
       } else {
